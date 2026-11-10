@@ -11,7 +11,7 @@ class TablaHash:
 
     def _generar_indice(self, valor: int) -> int:
         # Función Hash (CLAVE MOD 50).
-        return valor % self.cantidad_posiciones
+        return abs(valor % self.cantidad_posiciones)
 
     def guardar_valor(self, valor: int) -> None:
         indice_base = self._generar_indice(valor)

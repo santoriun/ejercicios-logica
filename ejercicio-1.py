@@ -18,12 +18,11 @@ opciones_dict={
 
 while victorias_usuario < 3 and victorias_maquina < 3:
 
-    # piedra es igual a 1 - papel es igual a 2 - tijeras es igual 3.
+    # piedra es igual a 1 - papel es igual a 2 - tijeras es igual 3 insercion de text.
 
     opcion_usuario = input("Selecciona:\n[1] Piedra.\n[2] Papel.\n[3] Tijeras\n")
     # Opciones aleatorias para que la maquina seleccione.
-    opciones = ["1","2","3"]
-    opcione_maquina = random.choice(opciones)
+    opcione_maquina = random.choice(list(opciones_dict.keys()))
 
     
     print("*"*20)
@@ -47,4 +46,5 @@ while victorias_usuario < 3 and victorias_maquina < 3:
 
     print("-------------- tabla de ganadores----------------")      
     print(f"Quien va ganando: \nMaquina {victorias_maquina}\nTu {victorias_usuario}")          
-    
+
+
